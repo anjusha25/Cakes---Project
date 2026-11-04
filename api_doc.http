@@ -1,0 +1,188 @@
+### all cake list api
+
+GET http://127.0.0.1:8000/cakes/
+# Authorization: Basic user user
+
+### creating a cake
+
+POST http://127.0.0.1:8000/cakes/
+# Authorization: Basic admin admin
+# Authorization: Token cb59761342a53892c142641745cbd048d41a2979
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzkzNzY5NzEzLCJpYXQiOjE3OTMzMzc3MTMsImp0aSI6IjA4ZTBkYThiZDBhYTRjM2NiOWI1MTY0NGQzYjI3NGNlIiwidXNlcl9pZCI6IjEifQ.NPatcXaf2BP6hZrYPTkev8wXDKVuVR27TSQ-VAyp18I
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+coffe cake
+--abc
+Content-Disposition: form-data; name="description"
+
+Rich chocolate cake with cream frosting
+--abc
+Content-Disposition: form-data; name="photo"; filename="image.jpg"
+Content-Type: image/jpeg
+
+< ./image.jpg
+--abc
+Content-Disposition: form-data; name="category"
+
+1
+--abc
+Content-Disposition: form-data; name="shape"
+
+1
+--abc
+Content-Disposition: form-data; name="weight"
+
+1
+--abc
+Content-Disposition: form-data; name="price"
+
+1250
+--abc--
+
+###  cake retrieve api
+GET http://127.0.0.1:8000/cakes/2/
+
+### updating a cake
+PATCH  http://127.0.0.1:8000/cakes/2/
+Authorization: Basic admin admin
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+Chocolate truffle Cake
+--abc--
+
+###  cake delete api
+DELETE  HTTP/1.1 http://127.0.0.1:8000/cakes/1/
+Authorization: Basic admin admin
+
+### all category list api
+
+GET http://127.0.0.1:8000/category/
+# Authorization: Basic user user
+
+### creating a category
+
+POST http://127.0.0.1:8000/category/
+Authorization: Basic admin admin
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+
+--abc--
+
+###  category retrieve api
+GET http://127.0.0.1:8000/category/2/
+
+### updating a category
+PATCH  http://127.0.0.1:8000/category/2/
+Authorization: Basic admin admin
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+vanila cake
+--abc--
+
+###  category delete api
+DELETE  HTTP/1.1 http://127.0.0.1:8000/category/1/
+Authorization: Basic admin admin
+
+### all shape list api
+
+GET http://127.0.0.1:8000/shape/
+# Authorization: Basic user user
+
+### creating a shape
+
+POST http://127.0.0.1:8000/shape/
+Authorization: Basic admin admin
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+Heart
+--abc--
+
+###  shape retrieve api
+GET http://127.0.0.1:8000/shape/1/
+
+### updating a shape
+PATCH  http://127.0.0.1:8000/shape/1/
+Authorization: Basic admin admin
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+hexagon
+--abc--
+
+###  shape delete api
+DELETE  HTTP/1.1 http://127.0.0.1:8000/shape/1/
+Authorization: Basic admin admin
+
+### all weight list api
+
+GET http://127.0.0.1:8000/weight/
+# Authorization: Basic user user
+
+### creating a weight
+
+POST http://127.0.0.1:8000/weight/
+Authorization: Basic admin admin
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+5kg
+--abc--
+
+###  weight retrieve api
+GET http://127.0.0.1:8000/weight/1/
+
+### updating a weight
+PATCH  http://127.0.0.1:8000/weight/1/
+Authorization: Basic admin admin
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+3kg
+--abc--
+
+###  weight delete api
+DELETE http://127.0.0.1:8000/weight/1/ 
+Authorization: Basic admin admin
+
+### login api
+
+POST  http://127.0.0.1:8000/login/
+Content-Type: application/json
+
+{
+    "username":"admin",
+    "password":"admin"
+}
+### register api
+
+POST  http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username":"janujani455@mailinator.com",
+    "first_name":"Janu Jani",
+    "role":"User",
+    "password":"Janujani313"
+}
+
