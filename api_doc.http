@@ -8,13 +8,13 @@ GET http://127.0.0.1:8000/cakes/
 POST http://127.0.0.1:8000/cakes/
 # Authorization: Basic admin admin
 # Authorization: Token cb59761342a53892c142641745cbd048d41a2979
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzkzNzY5NzEzLCJpYXQiOjE3OTMzMzc3MTMsImp0aSI6IjA4ZTBkYThiZDBhYTRjM2NiOWI1MTY0NGQzYjI3NGNlIiwidXNlcl9pZCI6IjEifQ.NPatcXaf2BP6hZrYPTkev8wXDKVuVR27TSQ-VAyp18I
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzk0MjMyNDgzLCJpYXQiOjE3OTM4MDA0ODMsImp0aSI6IjBlZGZiZTQ4NzdiNjQzY2Q4OTNiNzkxNzgwZmQyZjIwIiwidXNlcl9pZCI6IjEifQ.FfH30A3ZFis6n7d4N3Rrrb3KwTxLH4oR82cby0aVG5Q
 Content-Type: multipart/form-data; boundary=abc
 
 --abc
 Content-Disposition: form-data; name="name"
 
-coffe cake
+Chocolate cake
 --abc
 Content-Disposition: form-data; name="description"
 
@@ -74,7 +74,7 @@ Content-Type: multipart/form-data; boundary=abc
 --abc
 Content-Disposition: form-data; name="name"
 
-
+Anniversary Cake
 --abc--
 
 ###  category retrieve api
@@ -109,7 +109,7 @@ Content-Type: multipart/form-data; boundary=abc
 --abc
 Content-Disposition: form-data; name="name"
 
-Heart
+Circle
 --abc--
 
 ###  shape retrieve api
@@ -144,7 +144,7 @@ Content-Type: multipart/form-data; boundary=abc
 --abc
 Content-Disposition: form-data; name="name"
 
-5kg
+3kg
 --abc--
 
 ###  weight retrieve api
